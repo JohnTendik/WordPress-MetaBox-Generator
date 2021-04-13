@@ -1,0 +1,57 @@
+.edit-meta-box-screen .meta-box-footer {
+  .button.primary {
+    margin-left: auto;
+  }
+}
+
+.App .meta-box-header .meta-box-actions > button.edit-meta-done.button {
+  color: #007cba;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-left: 4px;
+  }
+}
+
+.meta-box-options-container {
+  p {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .meta-box-option {
+    margin-bottom: 14px;
+
+    > div {
+      display: flex;
+      align-items: flex-start;
+  
+      label {
+        width: 60%;
+        margin-right: 24px;
+        
+        small {
+          display: block;
+          font-size: 10px;
+        }
+      }
+
+      > div {
+        width: 40%;
+      }
+
+      .flex {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.screen-post-types {
+  display: flex;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}

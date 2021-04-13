@@ -1,0 +1,49 @@
+.custom-field-container {
+  padding: 8px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 14px;
+  
+  &:hover,
+  &.editting {
+    background: #f8f8f8;
+
+    .edit-field {
+      visibility: visible;
+    }
+  }
+
+  .custom-field {
+    width: 100%;
+
+    .field-preview {
+      display: flex;
+      align-items: center;
+    }
+
+    label {
+      display: inline-block;
+      width: 190px;
+    }
+
+    input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week] {
+      padding: 0 8px;
+      line-height: 2;
+      min-height: 30px;
+    }
+  }
+
+  .edit-field {
+    visibility: hidden;
+    margin-left: auto;
+  }
+}
+
+.field-options {
+  border-left: 5px solid #d3d3d3;
+  padding-left: 24px;
+}
+
+.field-option-container {
+  margin-bottom: 12px;
+}

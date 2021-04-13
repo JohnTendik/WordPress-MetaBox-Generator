@@ -1,0 +1,39 @@
+.dropdown-container {
+  position: relative;
+
+  .dropdown-button {
+    display: flex;
+    align-items: center;
+
+    &.primary {
+      svg {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .dropdown-children {
+    position: absolute;
+    left: 0;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: solid 1px #f8f8f8;
+    box-shadow: 1px 1px 10px -5px #d3d3d3;
+    border-radius: 2px;
+
+    button {
+      background: transparent;
+      border: 0;
+      padding: 8px;
+      text-align: left;
+      cursor: pointer;
+
+      &:hover {
+        background: #2271b1;
+        color: white;
+      }
+    }
+  }
+}

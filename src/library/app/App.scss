@@ -1,0 +1,108 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  background: #f0f0f1;
+
+  input:not([type='radio']):not([type='checkbox']) {
+    box-shadow: 0 0 0 transparent;
+    border-radius: 4px;
+    border: 1px solid #7e8993;
+    background-color: #fff;
+    color: #32373c;
+    padding: 0 8px;
+    line-height: 2;
+    min-height: 30px;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  .post-title {
+    padding: 3px 8px;
+    font-size: 1.7em;
+    line-height: 100%;
+    height: 1.7em;
+    width: 100%;
+    outline: 0;
+    box-shadow: 0 0 0 transparent;
+    border-radius: 4px;
+    border: 1px solid #8c8f94;
+    background-color: #fff;
+    color: #2c3338;
+    margin-bottom: 24px;
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    color: #333;
+    cursor: pointer;
+
+    &.primary {
+      background: #2271b1;
+      border-color: #2271b1;
+      color: #fff;
+      text-decoration: none;
+      text-shadow: none;
+      line-height: 2.30769231;
+      padding: 0 12px;
+    }
+  }
+}
+
+.App * {
+  box-sizing: border-box;
+}
+
+.App {
+  .meta-box {
+    min-width: 255px;
+    margin-bottom: 24px;
+    background: white;
+    border: 1px solid #c3c4c7;
+
+    &:hover .meta-box-actions {
+      visibility: visible;
+    }
+  }
+
+  .meta-box-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+
+    strong {
+      flex-grow: 1;
+    }
+
+    .meta-box-actions {
+      display: flex;
+      visibility: hidden;
+
+      > button,
+      > div > button {
+        font-size: 18px;
+      
+        &:hover {
+          color: #2271b1;
+        }
+      }
+    }
+  }
+
+  .meta-box-body {
+    padding: 8px 12px;
+  }
+
+  .meta-box-footer {
+    padding: 8px 12px;
+  }
+}

@@ -1,0 +1,28 @@
+.tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f3f5f6;
+  position: relative;
+  margin-right: 12px;
+  margin-bottom: 12px;
+
+  &:hover button {
+    display: flex;
+  }
+
+  button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 100%;
+    border: 0;
+    font-size: 10px;
+    padding: 4px;
+    background: #f06d06;
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

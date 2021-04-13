@@ -1,0 +1,21 @@
+.blank-content {
+  width: 75%;
+  background: #f8f8f8;
+  padding: 8px;
+  margin-bottom: 14px;
+  
+  &.small {
+    width: 30%; 
+    padding: 6px;
+  }
+
+  &.large {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+.meta-box.sticky {
+  position: sticky;
+  top: 10;
+}
