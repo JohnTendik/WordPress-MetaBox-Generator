@@ -23,7 +23,7 @@ const CustomMetaBox = () => {
     dispatch({
       type: 'add new field',
       value: {
-        id: 'new-field-id',
+        id: `new-field-id-${fields.length}`,
         type,
         label: 'New field',
       }
@@ -52,6 +52,12 @@ const CustomMetaBox = () => {
             <DropDown primary={true} buttonText={<>Add New Field <AiOutlinePlus /></>}>
               <button onClick={() => addNewField('text')}>Text</button>
               <button onClick={() => addNewField('number')}>Number</button>
+              <button onClick={() => addNewField('tel')}>Tel</button>
+              <button onClick={() => addNewField('url')}>Url</button>
+              <button onClick={() => addNewField('password')}>Password</button>
+              <button onClick={() => addNewField('email')}>Email</button>
+              <button onClick={() => addNewField('hidden')}>Hidden</button>
+              <button onClick={() => addNewField('color')}>Color</button>
             </DropDown>
           </div>
         </div>

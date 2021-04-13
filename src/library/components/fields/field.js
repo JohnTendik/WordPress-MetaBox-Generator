@@ -14,11 +14,16 @@ const Field = ({ field, indx }) => {
 
   const RenderField = (props) => {
     switch (field.type) {
+      case 'tel':
+      case 'url':
       case 'text':
+      case 'email':
+      case 'color':
+      case 'number':
+      case 'hidden':
+      case 'password':
         return <TextField {...props} />;
         break;
-      case 'number':
-        return <NumberField {...props} />
       default:
         break;
     }
