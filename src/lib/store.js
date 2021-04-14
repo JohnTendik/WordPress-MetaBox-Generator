@@ -56,7 +56,15 @@ const StateProvider = ( { children } ) => {
         }}
 
         return newState;
-      }
+      };
+
+      case 'delete field': {
+        let fields = state.fields;
+        fields = fields.filter((field, indx) => indx !== action.value);
+
+        const newState = {...state, fields};
+        return newState;
+      };
 
       default:
         throw new Error();

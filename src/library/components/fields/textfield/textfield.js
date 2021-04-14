@@ -86,7 +86,13 @@ const TextField = ({ field, isEditting, indx }) => {
   };
 
   const handleOptionsUpdate = (evt, optionName) => {
-    const value = evt.currentTarget.value;
+    let value = evt.currentTarget.value;
+
+    if (optionName === 'id') {
+      value = value.replace(/[- ]/gi,'_');
+      value = value.replace(/[^a-z0-9_]/gi,'');
+    }
+
     dispatch({
       type: 'update field option',
       value: {

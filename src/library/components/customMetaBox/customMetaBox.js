@@ -24,7 +24,7 @@ const CustomMetaBox = () => {
     dispatch({
       type: 'add new field',
       value: {
-        id: `new-field-id-${fields.length}`,
+        id: `new_field_id_${fields.length}`,
         type,
         label: 'New field',
       }

@@ -26,11 +26,23 @@ const GenerateMetaBox = (props) => {
     }
 
     if (fields.length) {
-      let fieldsHtml = fields.map((field) => `echo "<div class='jt-meta-box-flex'><label for='${field.id}'>${field.label}</label><input id='${field.id}' type='${field.type}' placeholder='${field.placeholder}' /></div>";`);
+      let fieldsHtml = fields.map((field) => {
+        return `
+          $${field.id}_value = $this->get_value('${field.id}');
+          echo "<div class='jt-meta-box-flex'><label for='${field.id}'>${field.label}</label><input id='${field.id}' name='${field.id}' value='$${field.id}_value' type='${field.type}' placeholder='${field.placeholder}' /></div>";
+        `;
+      });
       generatedCode = generatedCode.replace('@@fields@@', fieldsHtml.join('\n\r'));
+
+      // save posts
+      let savePostHtml = fields.map((field) => `$${field.id}_new_val = ( isset( $_POST['${field.id}'] ) ? sanitize_html_class( $_POST['${field.id}'] ) : null );
+      if ($${field.id}_new_val !== null) {
+        update_post_meta( $post_id, $meta_key_prefix . "${field.id}", $${field.id}_new_val );
+      }`);
+      generatedCode = generatedCode.replace('@@save_post@@', savePostHtml.join('\n\r'));
     } else {
       generatedCode = generatedCode.replace('@@fields@@', '');
-    }
+    }    
 
     return generatedCode;
   };
