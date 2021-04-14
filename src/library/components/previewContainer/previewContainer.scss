@@ -1,10 +1,10 @@
 .layout-container {
   display: flex;
-  width: 100%;
+  width: calc(100% - 250px);
   padding: 14px 24px;
 
   .main {
-    width: 100%;
+    width: calc(100% - 280px);
   }
 
   .side {

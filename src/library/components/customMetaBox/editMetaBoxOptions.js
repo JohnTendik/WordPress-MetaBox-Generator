@@ -45,7 +45,7 @@ const EditMetaBoxOptions = (props) => {
       <div className='meta-box-header'>
         <strong>Settings - {metaBoxGlobalOptions.title}</strong>
         <div className='meta-box-actions'>
-          <button onClick={(evt) => {props.setIsEditingMetaBox(false)}} className='button edit-meta-done'>Fields <AiOutlineArrowRight /></button>
+          <button onClick={(evt) => {props.setMetaBoxView('fields')}} className='button edit-meta-done'>Fields <AiOutlineArrowRight /></button>
         </div>
       </div>
       <div className='meta-box-body'>
@@ -174,7 +174,7 @@ const EditMetaBoxOptions = (props) => {
         </div>
       </div>
       <div className='meta-box-footer'>
-        <button onClick={(evt) => {props.setIsEditingMetaBox(false)}} className='button primary'>Fields <AiOutlineArrowRight /></button>
+        <button onClick={(evt) => {props.setMetaBoxView('fields')}} className='button primary'>Fields <AiOutlineArrowRight /></button>
       </div>
     </div>
   )
