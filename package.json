@@ -2,6 +2,7 @@
   "name": "metabox-generator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://johntendik.github.io/WordPress-MetaBox-Generator",
   "dependencies": {
     "@shopify/draggable": "^1.0.0-beta.8",
     "@testing-library/jest-dom": "^5.11.10",
@@ -39,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "node-sass": "^5.0.0"
   }
 }
