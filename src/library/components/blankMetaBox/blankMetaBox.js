@@ -11,7 +11,7 @@ const BlankMetaBox = (props) => {
   return (
     <div className={`meta-box ${isStickyClass}`}>
       <div className='meta-box-header' onClick={() => setIsOpen(!isOpen)}>
-        <strong>Default Meta Box</strong>
+        <strong>{props.title ? props.title : 'Default Meta Box'}</strong>
         { isOpen ? <AiFillCaretUp color="787c82" /> : <AiFillCaretDown color="787c82" /> }
       </div>
       { isOpen && (

@@ -50,7 +50,7 @@ const GenerateMetaBox = (props) => {
   return (
     <div className='meta-box generate-meta-box-screen'>
       <div className='meta-box-header'>
-        <strong>Fields - {metaBoxGlobalOptions.title}</strong>
+        <strong>{metaBoxGlobalOptions.title}</strong>
         <div className='meta-box-actions'>
           <button onClick={(evt) => {props.setMetaBoxView('fields')}} className='button edit-meta-done'><AiOutlineArrowLeft /> Fields</button>
         </div>
