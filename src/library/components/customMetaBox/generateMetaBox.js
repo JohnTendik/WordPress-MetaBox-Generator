@@ -27,10 +27,23 @@ const GenerateMetaBox = (props) => {
 
     if (fields.length) {
       let fieldsHtml = fields.map((field) => {
-        return `
-          $${field.id}_value = $this->get_value('${field.id}');
-          echo "<div class='jt-meta-box-flex'><label for='${field.id}'>${field.label}</label><input id='${field.id}' name='${field.id}' value='$${field.id}_value' type='${field.type}' placeholder='${field.placeholder}' /></div>";
-        `;
+        if (field.type === 'color') {
+          return `
+            $${field.id}_value = $this->get_value('${field.id}');
+            echo "<div class='jt-meta-box-flex'><label for='${field.id}'>${field.label}</label><input id='${field.id}' name='${field.id}' value='#$${field.id}_value' type='${field.type}' /></div>";
+          `;
+        } else if (field.type === 'paragraph') {
+          return `
+            $${field.id}_value = $this->get_value('${field.id}');
+            echo "<div class='jt-meta-box-flex'><span id='${field.id}'>${field.text}</span></div>";
+          `;
+        } else {
+          const placeholder = field.placeholder ? `placeholder='${field.placeholder}'` : '';
+          return `
+            $${field.id}_value = $this->get_value('${field.id}');
+            echo "<div class='jt-meta-box-flex'><label for='${field.id}'>${field.label}</label><input id='${field.id}' name='${field.id}' value='$${field.id}_value' type='${field.type}' ${placeholder} /></div>";
+          `;
+        }
       });
       generatedCode = generatedCode.replace('@@fields@@', fieldsHtml.join('\n\r'));
 

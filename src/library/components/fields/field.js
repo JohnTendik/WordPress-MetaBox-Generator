@@ -4,6 +4,7 @@ import { AiFillCaretDown, AiFillCaretUp, AiOutlineDelete } from 'react-icons/ai'
 import './field.scss';
 import { store } from '../../../lib/store';
 import TextField from './textfield/textfield';
+import ParagraphField from './paragraph/paragraph';
 
 const Field = ({ field, indx }) => {
   const { dispatch } = useContext(store);
@@ -32,6 +33,8 @@ const Field = ({ field, indx }) => {
       case 'password':
         return <TextField {...props} />;
         break;
+      case 'paragraph':
+        return <ParagraphField {...props} />;
       default:
         break;
     }
