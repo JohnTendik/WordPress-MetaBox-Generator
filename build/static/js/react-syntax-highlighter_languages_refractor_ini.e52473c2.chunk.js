@@ -1,2 +1,0 @@
-(this["webpackJsonpmetabox-generator"]=this["webpackJsonpmetabox-generator"]||[]).push([[60],{566:function(t,e,n){"use strict";function a(t){t.languages.ini={comment:/^[ \t]*[;#].*$/m,selector:/^[ \t]*\[.*?\]/m,constant:/^[ \t]*[^\s=]+?(?=[ \t]*=)/m,"attr-value":{pattern:/=.*/,inside:{punctuation:/^[=]/}}}}t.exports=a,a.displayName="ini",a.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_ini.e52473c2.chunk.js.map
