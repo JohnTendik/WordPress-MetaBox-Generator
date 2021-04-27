@@ -8,9 +8,10 @@ const initialState = {
     textDomain: 'jt-mbg-text-domain',
     context: 'advanced',
     priority: 'default',
-    className: 'JT_MBG_CLASS'
+    className: 'JT_MBG_CLASS',
   },
   fields: [],
+  generatedCode: 'Click the generate code button when you are ready.',
 };
 
 const store = createContext(initialState);
@@ -63,6 +64,11 @@ const StateProvider = ( { children } ) => {
         fields = fields.filter((field, indx) => indx !== action.value);
 
         const newState = {...state, fields};
+        return newState;
+      };
+
+      case 'update generated code': {      
+        const newState = {...state, generatedCode: action.value}
         return newState;
       };
 

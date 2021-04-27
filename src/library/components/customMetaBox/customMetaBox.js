@@ -1,16 +1,21 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { AiOutlineArrowRight, AiOutlinePlus } from 'react-icons/ai';
 
 import './customMetaBox.scss';
 import Field from '../fields/field';
 import { store } from '../../../lib/store';
-import GenerateMetaBox from './generateMetaBox';
 
-const CustomMetaBox = () => {
+const CustomMetaBox = (props) => {
   const { state } = useContext(store);
   const { metaBoxGlobalOptions, fields } = state;
   
   const [metaBoxView, setMetaBoxView] = useState('fields');
+
+  useEffect(() => {
+    if (props.metaBoxView !== metaBoxView) {
+      setMetaBoxView(props.metaBoxView);
+    }
+  }, [props.metaBoxView])
 
   const renderFields = () => {
     return fields.map((field, indx) => (
@@ -22,9 +27,6 @@ const CustomMetaBox = () => {
     <div className='meta-box'>
       <div className='meta-box-header'>
         <strong>{metaBoxGlobalOptions.title}</strong>
-        <div className='meta-box-actions'>
-          <button onClick={(evt) => {setMetaBoxView('code')}} className='button edit-meta-done'>Code <AiOutlineArrowRight /></button>
-        </div>
       </div>
       <div className='meta-box-body'>
         { !fields.length ? (
@@ -38,8 +40,7 @@ const CustomMetaBox = () => {
 
   return (
     <div>
-      {metaBoxView === 'fields' && renderFieldsScreen()}
-      {metaBoxView === 'code' && <GenerateMetaBox setMetaBoxView={setMetaBoxView}/>}
+      {renderFieldsScreen()}
     </div>
   );
 };

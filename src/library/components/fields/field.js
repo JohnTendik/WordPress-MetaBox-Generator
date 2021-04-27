@@ -25,9 +25,13 @@ const Field = ({ field, indx }) => {
     switch (field.type) {
       case 'tel':
       case 'url':
+      case 'date':
+      case 'time':
       case 'text':
       case 'email':
       case 'color':
+      case 'range':
+      case 'button':
       case 'number':
       case 'hidden':
       case 'password':
