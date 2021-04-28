@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/WordPress-MetaBox-Generator/static/css/main.3bba1fcd.chunk.css",
-    "main.js": "/WordPress-MetaBox-Generator/static/js/main.7111552f.chunk.js",
-    "main.js.map": "/WordPress-MetaBox-Generator/static/js/main.7111552f.chunk.js.map",
+    "main.js": "/WordPress-MetaBox-Generator/static/js/main.08947674.chunk.js",
+    "main.js.map": "/WordPress-MetaBox-Generator/static/js/main.08947674.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/WordPress-MetaBox-Generator/static/js/react-syntax-highlighter_languages_refractor_abap.5d9d6ef2.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/WordPress-MetaBox-Generator/static/js/react-syntax-highlighter_languages_refractor_abap.5d9d6ef2.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/WordPress-MetaBox-Generator/static/js/react-syntax-highlighter_languages_refractor_actionscript.d0c88d24.chunk.js",
@@ -305,22 +305,22 @@
     "react-syntax-highlighter_languages_refractor_xquery.js.map": "/WordPress-MetaBox-Generator/static/js/react-syntax-highlighter_languages_refractor_xquery.d9a1a9b9.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_yaml.js": "/WordPress-MetaBox-Generator/static/js/react-syntax-highlighter_languages_refractor_yaml.6a252777.chunk.js",
     "react-syntax-highlighter_languages_refractor_yaml.js.map": "/WordPress-MetaBox-Generator/static/js/react-syntax-highlighter_languages_refractor_yaml.6a252777.chunk.js.map",
-    "runtime-main.js": "/WordPress-MetaBox-Generator/static/js/runtime-main.762f8f9a.js",
-    "runtime-main.js.map": "/WordPress-MetaBox-Generator/static/js/runtime-main.762f8f9a.js.map",
-    "static/js/153.eedfbba9.chunk.js": "/WordPress-MetaBox-Generator/static/js/153.eedfbba9.chunk.js",
-    "static/js/153.eedfbba9.chunk.js.map": "/WordPress-MetaBox-Generator/static/js/153.eedfbba9.chunk.js.map",
-    "static/js/154.50649863.chunk.js": "/WordPress-MetaBox-Generator/static/js/154.50649863.chunk.js",
-    "static/js/154.50649863.chunk.js.map": "/WordPress-MetaBox-Generator/static/js/154.50649863.chunk.js.map",
+    "runtime-main.js": "/WordPress-MetaBox-Generator/static/js/runtime-main.543c9293.js",
+    "runtime-main.js.map": "/WordPress-MetaBox-Generator/static/js/runtime-main.543c9293.js.map",
+    "static/js/153.4a02439e.chunk.js": "/WordPress-MetaBox-Generator/static/js/153.4a02439e.chunk.js",
+    "static/js/153.4a02439e.chunk.js.map": "/WordPress-MetaBox-Generator/static/js/153.4a02439e.chunk.js.map",
+    "static/js/154.873114dd.chunk.js": "/WordPress-MetaBox-Generator/static/js/154.873114dd.chunk.js",
+    "static/js/154.873114dd.chunk.js.map": "/WordPress-MetaBox-Generator/static/js/154.873114dd.chunk.js.map",
     "static/js/155.05568415.chunk.js": "/WordPress-MetaBox-Generator/static/js/155.05568415.chunk.js",
     "static/js/155.05568415.chunk.js.map": "/WordPress-MetaBox-Generator/static/js/155.05568415.chunk.js.map",
     "index.html": "/WordPress-MetaBox-Generator/index.html",
     "static/css/main.3bba1fcd.chunk.css.map": "/WordPress-MetaBox-Generator/static/css/main.3bba1fcd.chunk.css.map",
-    "static/js/153.eedfbba9.chunk.js.LICENSE.txt": "/WordPress-MetaBox-Generator/static/js/153.eedfbba9.chunk.js.LICENSE.txt"
+    "static/js/153.4a02439e.chunk.js.LICENSE.txt": "/WordPress-MetaBox-Generator/static/js/153.4a02439e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.762f8f9a.js",
-    "static/js/153.eedfbba9.chunk.js",
+    "static/js/runtime-main.543c9293.js",
+    "static/js/153.4a02439e.chunk.js",
     "static/css/main.3bba1fcd.chunk.css",
-    "static/js/main.7111552f.chunk.js"
+    "static/js/main.08947674.chunk.js"
   ]
 }
