@@ -38,6 +38,18 @@ const TextField = ({ field, isEditting, indx }) => {
     type: 'number'
   }];
 
+  const dateFieldOptions = [{
+    label: 'Max value',
+    value: field.max,
+    optionName: 'max',
+    type: 'date'
+  }, {
+    label: 'Min value',
+    value: field.min,
+    optionName: 'min',
+    type: 'date'
+  }];
+
   const getAvailableOptions = () => {
     let options = [...defaultOptions];
     switch (field.type) {
@@ -45,7 +57,12 @@ const TextField = ({ field, isEditting, indx }) => {
         options = [...options, ...textFieldOptions];
         break;
       case 'number':
+      case 'range':
         options = [...options, ...numberFieldOptions];
+        break;
+      case 'date':
+        options = [...options, ...dateFieldOptions];
+        break;
       default:
         break;
     }
@@ -66,7 +83,7 @@ const TextField = ({ field, isEditting, indx }) => {
       return (
         <div className='field-option-container'>
           <label>{optionField.label}</label>
-          <input type={optionField.type || 'text'} value={optionField.value} onChange={(evt) => handleOptionsUpdate(evt, optionField.optionName)} />
+          <input name={optionField.label.replace(' ', '')} type={optionField.type || 'text'} value={optionField.value} onChange={(evt) => handleOptionsUpdate(evt, optionField.optionName)} />
         </div>
       )
     });

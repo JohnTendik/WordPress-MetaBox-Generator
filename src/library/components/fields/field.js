@@ -39,6 +39,8 @@ const Field = ({ field, indx }) => {
         break;
       case 'paragraph':
         return <ParagraphField {...props} />;
+      case 'title':
+        return <ParagraphField {...props} />;
       default:
         break;
     }
